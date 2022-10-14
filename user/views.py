@@ -28,8 +28,8 @@ def signup(request):
         phone=phone,
         address=address,
         )
-        return redirect('login/')
-
+        return redirect('/login/')
+#에러 나타내기 redirect사용법 로그아웃
 def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
@@ -61,4 +61,4 @@ def home(request):
 @login_required
 def logout(request):
     auth.logout(request)
-    return render(request, 'login.html')
+    return redirect('/login/')
