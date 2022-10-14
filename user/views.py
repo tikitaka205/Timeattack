@@ -29,7 +29,7 @@ def signup(request):
         address=address,
         )
         return redirect('/login/')
-#에러 나타내기 redirect사용법 로그아웃
+
 def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
